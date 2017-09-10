@@ -1,16 +1,22 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>CDN Find My Vehicle App</h1>
-<div class="btn-group" dropdown>
-  <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
-    Lunar Vehicles <span class="caret"></span>
-  </button>
-  <ul *dropdownMenu class="dropdown-menu" role="menu">
-    <li role="menuitem"><a class="dropdown-item" href="#">Heuvos Rancheros</a></li>
-  </ul>
-</div>
 
-<div class="row">
+<div class="row vehicleSelect">
   <div class="col-xs-12 col-md-8">
-
+    <div class="btn-group" dropdown>
+      <button dropdownToggle type="button" class="btn btn-primary dropdown-toggle">
+        Lunar Vehicles <span class="caret"></span>
+      </button>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#">Heuvos Rancheros</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+      <agm-map [latitude]="lat" [longitude]="lng">
+          <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+        </agm-map>
   </div>
 </div>
