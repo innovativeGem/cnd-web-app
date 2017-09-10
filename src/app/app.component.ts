@@ -11,6 +11,8 @@ import { VehicleLocationService } from './vehicle-location.service';
 export class AppComponent implements OnInit {
   lat: Number = 51.678418;
   lng: Number = 7.809007;
+  // vehicle: {'vehicle_id': Number, 'lat': Number, 'long': Number, 'name': String, 'model': String, 'power_level_percent': Number};
+  // vehicles: vehicle[];
   vehicle: {};
 
   constructor(private _vehicleService: VehicleLocationService) {}
@@ -18,6 +20,10 @@ export class AppComponent implements OnInit {
   findVehicle() {
     this.vehicle = this._vehicleService.vehicleLoc();
     console.log('vehicle: ' + this.vehicle);
+  }
+
+  searchVehicle() {
+    console.log('searching...' + this.lat + ', ' + this.lng);
   }
 
   ngOnInit() {

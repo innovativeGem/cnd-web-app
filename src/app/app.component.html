@@ -20,3 +20,19 @@
         </agm-map>
   </div>
 </div>
+<div class="row footer">
+  <p class="col-md-12">Please enter your co-ordinates (Lattitude and Longitude) to search your vehicle.</p>
+  <form class="form-inline">
+      <div class="form-group col-xs-12 col-md-4">
+        <label for="inputLat">Lat</label>
+        <input type="number" class="form-control" name="lat" [(ngModel)]="lat" placeholder="Lattitude">
+      </div>
+      <div class="form-group col-xs-12 col-md-4">
+        <label for="inputLong">Long</label>
+        <input type="number" class="form-control" name="lng" [(ngModel)]="lng" placeholder="Longitude">
+      </div>
+      <!--
+      <button type="submit" class="btn btn-default col-xs-8 col-md-2" (click)="searchVehicle()">Search</button>
+      -->
+    </form>
+</div>
